@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/badgesInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectConstraintLayout"
+        app:layout_constraintBottom_toTopOf="@id/activityRecyclerView"
+        android:background="@drawable/border_round_lightgray"
+        app:hintEnabled="false"
+        app:endIconDrawable="@drawable/group_1930"
+        app:endIconMode="dropdown_menu"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="25dp"
+        >
+        <!-- Inside text input layout add
+              an auto complete text view
+                and make its input type to none-->
+        <AutoCompleteTextView
+            android:id="@+id/badgesAutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="@string/select_badge"
+            android:textColor="@color/loginpage_bordercolor"
+            android:textSize="12sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingHorizontal="21dp"
+        android:id="@+id/selectConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/allSelectorTextView"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="@string/all"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/activity_selected"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/skillsSelectorTextView"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            android:text="Skills"
+            android:gravity="center"
+            android:background="@drawable/activity_unselected"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/allSelectorTextView"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toStartOf="@id/attributesSelectorTextView"
+            />
+
+        <TextView
+            android:id="@+id/attributesSelectorTextView"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="Attributes"
+            android:gravity="center"
+            android:background="@drawable/activity_unselected"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/skillsSelectorTextView"
+            app:layout_constraintEnd_toStartOf="@id/waypointsSelectorTextView"
+            android:layout_marginStart="5dp"
+            />
+
+        <TextView
+            android:id="@+id/waypointsSelectorTextView"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="@string/waypoints"
+            android:gravity="center"
+            android:background="@drawable/activity_unselected"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/attributesSelectorTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="5dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activityRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/badgesInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        android:background="@drawable/border_activity_history_all_recycler"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

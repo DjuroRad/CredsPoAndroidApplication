@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:title="@string/home"
+        android:icon="@drawable/home_icon"
+        />
+    <item
+        android:id="@+id/activityFragment"
+        android:title="@string/activities"
+        android:icon="@drawable/assets_icon"
+        />
+    <item
+        android:id="@+id/progressFragment"
+        android:title="@string/progress"
+        android:icon="@drawable/rocket_icon"
+        />
+    <item
+        android:id="@+id/profileFragment"
+        android:title="@string/profile"
+        android:icon="@drawable/profile_icon"
+    />
+</menu>

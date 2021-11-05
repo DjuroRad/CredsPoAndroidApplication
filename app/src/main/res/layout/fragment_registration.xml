@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/backButtonRegisterFragment"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:textSize="24sp"
+        android:padding="3dp"
+        app:layout_constraintStart_toStartOf="@id/createAnAccountButtonRegister"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/tabler_icon_arrow_narrow_left"
+        />
+
+    <TextView
+        android:id="@+id/createAnAccountTextViewRegisterFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/backButtonRegisterFragment"
+        app:layout_constraintStart_toStartOf="@id/createAnAccountButtonRegister"
+        android:text="@string/create_an_account"
+        android:textSize="24sp"
+        android:fontFamily="@font/sora_semi_bold"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/personalInfoTextViewRegistrationFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/personal_info"
+        app:layout_constraintTop_toBottomOf="@id/createAnAccountTextViewRegisterFragment"
+        app:layout_constraintStart_toStartOf="@id/createAnAccountButtonRegister"
+        android:layout_marginTop="41dp"
+        android:textColor="@color/subtitle_registration"
+        android:fontFamily="@font/sora_semi_bold"
+        />
+
+
+    <TextView
+        android:id="@+id/firstNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/first_name"
+        android:textSize="11sp"
+        app:layout_constraintTop_toBottomOf="@id/personalInfoTextViewRegistrationFragment"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/createAnAccountButtonRegister"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstNameInputLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/firstNameLabel"
+        app:layout_constraintStart_toStartOf="@id/createAnAccountTextViewRegisterFragment"
+        app:boxBackgroundMode="none"
+        android:background="@drawable/border_round_lightgray"
+        >
+        <EditText
+            android:id="@+id/firstNameEditText"
+            android:layout_width="325dp"
+            android:layout_height="55dp"
+            android:inputType="text"
+            android:paddingTop="10dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/lastNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/last_name"
+        android:textSize="11sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/firstNameInputLayout"
+        app:layout_constraintStart_toStartOf="@id/createAnAccountButtonRegister"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lastNameInputLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/lastNameLabel"
+        app:layout_constraintStart_toStartOf="@id/createAnAccountTextViewRegisterFragment"
+        app:boxBackgroundMode="none"
+        android:background="@drawable/border_round_lightgray"
+        >
+        <EditText
+            android:id="@+id/lastNameEditText"
+            android:layout_width="325dp"
+            android:layout_height="55dp"
+            android:inputType="text"
+            android:paddingTop="10dp"
+            android:hint=""
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/birthYearTextView"
+        android:text="@string/birth_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        app:layout_constraintTop_toBottomOf="@id/lastNameInputLayout"
+        app:layout_constraintStart_toStartOf="@id/lastNameInputLayout"
+        android:layout_marginTop="16dp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/birthYearInputLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="@id/birthYearTextView"
+        app:layout_constraintTop_toBottomOf="@id/birthYearTextView"
+        android:background="@drawable/border_round_lightgray"
+        app:hintEnabled="false"
+        app:endIconDrawable="@drawable/group_1930"
+        app:endIconMode="dropdown_menu"
+        >
+        <!-- Inside text input layout add
+              an auto complete text view
+                and make its input type to none-->
+        <AutoCompleteTextView
+            android:id="@+id/birtYearAutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:textSize="12sp"
+            android:textColor="@color/loginpage_bordercolor"
+            android:text="@string/select_birth_year"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/questionMarkImageView"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/component_7__2"
+        app:layout_constraintStart_toEndOf="@id/birthYearInputLayout"
+        app:layout_constraintTop_toTopOf="@id/birthYearInputLayout"
+        app:layout_constraintBottom_toBottomOf="@id/birthYearInputLayout"
+        android:layout_marginStart="16dp"
+        />
+
+
+    <TextView
+        android:id="@+id/selectCountryTextView"
+        android:text="@string/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        app:layout_constraintTop_toBottomOf="@id/birthYearInputLayout"
+        app:layout_constraintStart_toStartOf="@id/birthYearInputLayout"
+        android:layout_marginTop="16dp"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/countryInputLayout"
+        android:layout_width="325dp"
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="@id/selectCountryTextView"
+        app:layout_constraintTop_toBottomOf="@id/selectCountryTextView"
+        android:background="@drawable/border_round_lightgray"
+        app:hintEnabled="false"
+        app:endIconDrawable="@drawable/group_1930"
+        app:endIconMode="dropdown_menu"
+        >
+        <!-- Inside text input layout add
+              an auto complete text view
+                and make its input type to none-->
+        <AutoCompleteTextView
+            android:id="@+id/countryAutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="@string/select_country"
+            android:textColor="@color/loginpage_bordercolor"
+            android:textSize="12sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/loginInfoSubTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/login_info"
+        app:layout_constraintTop_toBottomOf="@id/countryInputLayout"
+        app:layout_constraintStart_toStartOf="@id/personalInfoTextViewRegistrationFragment"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/subtitle_registration"
+        android:fontFamily="@font/sora_semi_bold"
+        />
+
+
+    <TextView
+        android:id="@+id/email_label_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/email"
+        android:textSize="11sp"
+        android:textColor="@color/loginpage_text_color"
+        app:layout_constraintTop_toBottomOf="@id/loginInfoSubTitleTextView"
+        app:layout_constraintStart_toStartOf="@id/loginInfoSubTitleTextView"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        app:boxBackgroundColor="@android:color/transparent"
+        android:background="@drawable/border_round_lightgray"
+        android:id="@+id/emailInputLayoutRegister"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/email_label_register"
+        app:layout_constraintEnd_toEndOf="@id/firstNameInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/email_label_register"
+        app:boxBackgroundMode="none"
+        app:hintEnabled="false"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailTextInputEditTextRegister"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/passwordLabelRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:textSize="11sp"
+        android:textColor="@color/loginpage_text_color"
+        app:layout_constraintTop_toBottomOf="@id/emailInputLayoutRegister"
+        app:layout_constraintStart_toStartOf="@id/emailInputLayoutRegister"
+        android:layout_marginTop="20dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/passwordConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/border_round_lightgray"
+        app:layout_constraintStart_toStartOf="@id/emailInputLayoutRegister"
+        app:layout_constraintEnd_toEndOf="@id/emailInputLayoutRegister"
+        app:layout_constraintTop_toBottomOf="@id/passwordLabelRegister"
+        >
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:passwordToggleEnabled="false"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/registerPasswordToggleButton"
+            >
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:paddingTop="10dp"
+                android:hint=""
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextSwitcher
+            android:id="@+id/registerPasswordToggleButton"
+            android:layout_width="wrap_content"
+            android:minWidth="50dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/passwordInputLayout"
+            android:text="@string/show"
+            android:layout_marginEnd="16dp"
+            android:inAnimation="@android:anim/fade_in"
+            android:outAnimation="@android:anim/fade_out"
+            >
+
+            <TextView
+                android:id="@+id/tv_onboarding_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/show"
+                android:fontFamily="@font/sora_medium"
+                android:textColor="@color/show_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_onboarding_letsgo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/hide"
+
+                />
+
+        </TextSwitcher>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/repeatPasswordLabelRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repeat password"
+        android:textSize="11sp"
+        android:textColor="@color/loginpage_text_color"
+        app:layout_constraintTop_toBottomOf="@id/passwordConstraintLayout"
+        app:layout_constraintStart_toStartOf="@id/passwordConstraintLayout"
+        android:layout_marginTop="20dp"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/repeatPasswordConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/border_round_lightgray"
+        app:layout_constraintStart_toStartOf="@id/emailInputLayoutRegister"
+        app:layout_constraintEnd_toEndOf="@id/emailInputLayoutRegister"
+        app:layout_constraintTop_toBottomOf="@id/repeatPasswordLabelRegister"
+        >
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/repeatPasswordInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:passwordToggleEnabled="false"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/repeatRegisterPasswordToggleButton"
+            >
+            <EditText
+                android:id="@+id/repeatPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:paddingTop="10dp"
+                android:hint=""
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextSwitcher
+            android:id="@+id/repeatRegisterPasswordToggleButton"
+            android:layout_width="wrap_content"
+            android:minWidth="50dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/repeatPasswordInputLayout"
+            android:text="@string/show"
+            android:layout_marginEnd="16dp"
+            android:inAnimation="@android:anim/fade_in"
+            android:outAnimation="@android:anim/fade_out"
+            >
+
+            <TextView
+                android:id="@+id/repteat_tv_onboarding_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/show"
+                android:fontFamily="@font/sora_medium"
+                android:textColor="@color/show_color"
+                />
+
+            <TextView
+                android:id="@+id/repeat_tv_onboarding_letsgo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/hide"
+
+                />
+
+        </TextSwitcher>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <CheckBox
+        android:id="@+id/checkBoxPolicy"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="@id/repeatPasswordConstraintLayout"
+        app:layout_constraintTop_toBottomOf="@id/repeatPasswordConstraintLayout"
+        android:background="@drawable/checkbox_selector"
+        android:button="@android:color/transparent"
+        />
+
+    <TextView
+        android:id="@+id/policyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/privacy_and_policy"
+        app:layout_constraintStart_toEndOf="@id/checkBoxPolicy"
+        app:layout_constraintTop_toTopOf="@id/checkBoxPolicy"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/loginpage_login_button"
+        android:fontFamily="@font/sora_bold"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/acceptPolicyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/i_accept_privacy_and_policy"
+        app:layout_constraintStart_toEndOf="@id/checkBoxPolicy"
+        app:layout_constraintTop_toBottomOf="@id/policyTextView"
+        android:layout_marginStart="15dp"
+        android:textSize="10sp"
+        />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/createAnAccountButtonRegister"
+        android:layout_width="325dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_login_button"
+        android:fontFamily="@font/sora_bold"
+        android:text="@string/create_account"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxPolicy"
+        app:layout_constraintBottom_toTopOf="@id/errorMessageTextView"
+        android:layout_marginBottom="24dp"
+        />
+
+    <TextView
+        android:id="@+id/errorMessageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintStart_toStartOf="@id/createAnAccountButtonRegister"
+        app:layout_constraintTop_toBottomOf="@id/createAnAccountButtonRegister"
+        app:layout_constraintEnd_toEndOf="@id/createAnAccountButtonRegister"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:textColor="#F44336"
+        android:fontFamily="@font/sora_semi_bold"
+        android:textSize="12sp"
+        android:background="@drawable/border_error_message"
+        android:text=""
+        android:visibility="invisible"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="335dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/border_dialog_fragment"
+    >
+
+    <TextView
+        android:id="@+id/cameraPromptTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/choose_image"
+        android:fontFamily="@font/sora_bold"
+        android:textSize="14sp"
+        android:layout_marginTop="22.85dp"
+        android:layout_marginStart="20.5dp"
+        />
+
+    <View
+        android:id="@+id/guidelineGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cameraPromptTextView"
+        android:background="#E6E6E6"
+        android:layout_marginTop="22.56dp"
+        />
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/do_you_want_to_select_an_image_from_gallery_or_take_a_photo"
+        app:layout_constraintTop_toBottomOf="@id/guidelineGuideline"
+        app:layout_constraintStart_toStartOf="@id/guidelineGuideline"
+        android:layout_marginTop="21.59dp"
+        android:fontFamily="@font/sora_light"
+        app:layout_constraintEnd_toEndOf="@id/guidelineGuideline"
+        />
+
+    <TextView
+        android:id="@+id/cameraButtonTextView"
+        android:layout_width="135dp"
+        android:layout_height="55dp"
+        android:text="@string/camera"
+        android:gravity="center"
+        android:fontFamily="@font/sora_bold"
+        android:background="@drawable/border_login_button"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/questionTextView"
+        app:layout_constraintStart_toStartOf="@id/questionTextView"
+        android:layout_marginTop="23dp"
+        />
+
+    <TextView
+        android:id="@+id/galleryButtonTextView"
+        android:layout_width="135dp"
+        android:layout_height="55dp"
+        android:text="@string/gallery"
+        android:gravity="center"
+        android:fontFamily="@font/sora_bold"
+        android:background="@drawable/border_login_button"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/questionTextView"
+        app:layout_constraintEnd_toEndOf="@id/questionTextView"
+        android:layout_marginTop="23dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="14dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

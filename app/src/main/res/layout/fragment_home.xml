@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profileConstraingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="28.65dp"
+        >
+
+        <TextView
+            android:id="@+id/hiNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:fontFamily="@font/sora_bold"
+            android:gravity="center_vertical"
+            android:text="Hi John"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="46dp" />
+
+        <ImageView
+            android:layout_width="36.59dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/hiNameTextView"
+            app:layout_constraintBottom_toBottomOf="@id/hiNameTextView"
+            android:background="@drawable/logomark" />
+
+        <ImageView
+            android:id="@+id/profilePictureImageView"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            app:layout_constraintTop_toBottomOf="@id/hiNameTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/circle_picture"
+            android:src="@drawable/image_placeholder"
+            android:layout_marginTop="83dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/skillsPreviewConstraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/profilePictureImageView"
+            app:layout_constraintStart_toStartOf="@id/hiNameTextView"
+            android:layout_marginTop="82dp">
+
+            <View
+                android:id="@+id/skillsBorderView"
+                android:layout_width="5dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/border_skills" />
+
+            <TextView
+                android:id="@+id/skillsPreviewTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/skills"
+                android:fontFamily="@font/sora_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="13dp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/skillsPointsTextVeiw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/skills_points"
+                android:fontFamily="@font/sora_medium"
+                app:layout_constraintStart_toStartOf="@id/skillsPreviewTitleTextView"
+                app:layout_constraintTop_toBottomOf="@id/skillsPreviewTitleTextView"
+                android:textSize="10sp"
+                android:textColor="@color/subtitle_registration" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/attributesPreviewConstraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/skillsPreviewConstraintLayout"
+            app:layout_constraintTop_toTopOf="@id/skillsPreviewConstraintLayout"
+            app:layout_constraintEnd_toStartOf="@id/waypointsConstraingLayout">
+
+            <View
+                android:id="@+id/attributesBorderView"
+                android:layout_width="5dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/border_attributes" />
+
+            <TextView
+                android:id="@+id/attributesPreviewTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/attributes"
+                android:fontFamily="@font/sora_medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="13dp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/attributesPointsTextVeiw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/skills_points"
+                android:fontFamily="@font/sora_medium"
+                app:layout_constraintStart_toStartOf="@id/attributesPreviewTitleTextView"
+                app:layout_constraintTop_toBottomOf="@id/attributesPreviewTitleTextView"
+                android:textSize="10sp"
+                android:textColor="@color/subtitle_registration" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/waypointsConstraingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/attributesPreviewConstraintLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="25dp">
+
+            <View
+                android:id="@+id/waypointsBorderView"
+                android:layout_width="5dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/border_waypoints" />
+
+            <TextView
+                android:id="@+id/waypointsPreviewTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/waypoints"
+                android:fontFamily="@font/sora_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="13dp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/waypointsPointsTextVeiw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/skills_points"
+                android:fontFamily="@font/sora_medium"
+                app:layout_constraintStart_toStartOf="@id/waypointsPreviewTitleTextView"
+                app:layout_constraintTop_toBottomOf="@id/waypointsPreviewTitleTextView"
+                android:textSize="10sp"
+                android:textColor="@color/subtitle_registration" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recentlyEarnedBadgesConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profileConstraingLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/border_error_message"
+        android:paddingEnd="25dp"
+        android:paddingStart="25dp"
+        android:paddingBottom="60dp"
+        >
+
+        <TextView
+            android:id="@+id/recentlyTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/recently_earned_baddges"
+            android:textSize="18sp"
+            android:fontFamily="@font/sora_bold"
+            android:layout_marginTop="31.35dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recentlyTitleTextView"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:id="@+id/skillsIconImageView"
+                android:layout_width="86dp"
+                android:layout_height="86dp"
+                android:background="@drawable/skills_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/skillsIconLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sora_medium"
+                android:textSize="12sp"
+                android:text="@string/skills"
+                app:layout_constraintTop_toBottomOf="@id/skillsIconImageView"
+                app:layout_constraintStart_toStartOf="@id/skillsIconImageView"
+                app:layout_constraintEnd_toEndOf="@id/skillsIconImageView"
+                android:layout_marginTop="15dp" />
+
+            <ImageView
+                android:id="@+id/waypointsIconImageView"
+                android:layout_width="86dp"
+                android:layout_height="86dp"
+                android:background="@drawable/waypoints_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/skillsIconImageView"
+                app:layout_constraintEnd_toStartOf="@id/attributesIconImageView" />
+
+            <TextView
+                android:id="@+id/waypointsIconLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sora_medium"
+                android:textSize="12sp"
+                android:text="@string/waypoints"
+                app:layout_constraintTop_toBottomOf="@id/waypointsIconImageView"
+                app:layout_constraintStart_toStartOf="@id/waypointsIconImageView"
+                app:layout_constraintEnd_toEndOf="@id/waypointsIconImageView"
+                android:layout_marginTop="15dp" />
+
+            <ImageView
+                android:id="@+id/attributesIconImageView"
+                android:layout_width="86dp"
+                android:layout_height="86dp"
+                android:background="@drawable/attributes_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/attributesIconLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sora_medium"
+                android:textSize="12sp"
+                android:text="@string/attributes"
+                app:layout_constraintTop_toBottomOf="@id/attributesIconImageView"
+                app:layout_constraintStart_toStartOf="@id/attributesIconImageView"
+                app:layout_constraintEnd_toEndOf="@id/attributesIconImageView"
+                android:layout_marginTop="15dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/addActivityConstraintLayoutViw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/skillsIconLabelTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/border_add_activity"
+                android:paddingVertical="22dp"
+                >
+
+                <ImageView
+                    android:id="@+id/addActivityQuoteIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/quote_text_icon" />
+
+                <TextView
+                    android:id="@+id/addActivityTextView"
+                    android:text="@string/add_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/add_activity"
+                    android:fontFamily="@font/sora_bold"
+                    app:layout_constraintTop_toTopOf="@id/addActivityQuoteIcon"
+                    app:layout_constraintBottom_toBottomOf="@id/addActivityQuoteIcon"
+                    app:layout_constraintStart_toEndOf="@id/addActivityQuoteIcon"
+                    android:layout_marginStart="10dp" />
+
+                <Button
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/addActivityQuoteIcon"
+                    android:background="@drawable/arrow_right"
+                    android:layout_marginEnd="15dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

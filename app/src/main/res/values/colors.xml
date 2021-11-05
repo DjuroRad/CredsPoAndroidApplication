@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="loginpage_text_color">#001E31</color>
+    <color name="loginpage_bordercolor">#C3C3C3</color>
+    <color name="loginpage_login_button">#345BA8</color>
+    <color name="loginpage_create_an_account">#2675AF</color>
+    <color name="show_color">#8E8E8E</color>
+    <color name="subtitle_registration">#72838D</color>
+    <color name="default_font_color">#001E31</color>
+    <color name="verify_border_edit_text">#00195A</color>
+    <color name="error_message">#DDFF3627</color>
+    <color name="add_activity">#00195A</color>
+    <color name="gray_icons_unchecked">#9AA3BD</color>
+    <color name="activity_selector">#6FC6B4</color>
+    <color name="activity_unselector">#F2F2F2</color>
+    <color name="activity_item_border">#E6E6E6</color>
+</resources>
